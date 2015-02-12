@@ -231,13 +231,20 @@
                             </div>
                             <div class="col-md-12 bordes">
                                 <div class="col-md-4">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <p style="font-size: 13px;">Cantidad de envios</p>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-8">
                                         <div class="borde">
-                                            <div style="background-color: #00b0f0!important; width:49%; float: left;height: 27px;padding-top: 1px;text-align: center;"><img class="" src="img/dropbox.png"/></div>
-                                            <div style="width:49%; float: left;"><input style="width:100%" type="number" name="quantity" min="1" max="15" placeholder="#" ng-model="enviosCount"></div>
+                                            <div style="background-color: #00b0f0!important; width:39%; float: left;height: 27px;padding-top: 1px;text-align: center;"><img class="" src="img/dropbox.png"/></div>
+                                            <div style="width:29%; float: left;">
+                                                <input style="width:100%" type="text" readonly="readonly" name="quantity" min="1" max="15" placeholder="#" ng-model="enviosCount">
+                                                
+                                            </div>
+                                            <div style="float:left;margin-left:10px;color:#00b0f0!important;line-height:10px">
+                                                <i class="fa fa-plus-square" style="cursor:pointer" ng-click="incEnvios($event)"></i><br>
+                                                <i class="fa fa-minus-square" style="cursor:pointer" ng-click="decEnvios($event)"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

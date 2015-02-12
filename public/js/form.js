@@ -27,6 +27,15 @@ angular.module("form", [])
             }
         });
 
+        $scope.incEnvios = function(e){
+            e.preventDefault();
+            $scope.enviosCount++;
+        }
+        $scope.decEnvios = function(e){
+            e.preventDefault();
+            $scope.enviosCount--;
+        }
+
         function getMontoExtra(division) {
             if (!division || !division.toLowerCase) {
                 return 0;
