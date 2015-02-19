@@ -241,9 +241,9 @@
                                                 <input style="width:100%" type="text" readonly="readonly" name="quantity" min="1" max="15" placeholder="#" ng-model="enviosCount">
                                                 
                                             </div>
-                                            <div style="float:left;margin-left:10px;color:#00b0f0!important;line-height:10px">
-                                                <i class="fa fa-plus-square" style="cursor:pointer" ng-click="incEnvios($event)"></i><br>
-                                                <i class="fa fa-minus-square" style="cursor:pointer" ng-click="decEnvios($event)"></i>
+                                            <div style="float:left;margin-left:10px;line-height:10px">
+                                                <div><a href="#" style="color:#00b0f0!important;"><i class="fa fa-plus-square" ng-click="incEnvios($event)"></i></a></div>
+                                                <div><a href="#" style="color:#00b0f0!important;"><i class="fa fa-minus-square" ng-click="decEnvios($event)"></i></a></div>
                                             </div>
                                         </div>
                                     </div>
