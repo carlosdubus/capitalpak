@@ -13,7 +13,11 @@ angular.module("form", [])
 
         $scope.$watch('enviosCount', function() {
 
-            if(!$scope.enviosCount || isNaN($scope.enviosCount) || $scope.enviosCount < MIN_ENVIOS){
+            if(!$scope.enviosCount || isNaN($scope.enviosCount)){
+                return;
+            }
+
+            if($scope.enviosCount < MIN_ENVIOS){
                 $scope.enviosCount = MIN_ENVIOS;
             }
 
@@ -34,6 +38,9 @@ angular.module("form", [])
         $scope.decEnvios = function(e){
             e.preventDefault();
             $scope.enviosCount--;
+            if($scope.enviosCount < MIN_ENVIOS){
+                $scope.enviosCount = MIN_ENVIOS;
+            }
         }
 
         function getMontoExtra(division) {
@@ -63,8 +70,17 @@ angular.module("form", [])
 
             return v.toFixed(2);
         };
+        var oldGetEnvios = [];
         $scope.getEnvios = function() {
-            return new Array($scope.enviosCount);
+            if(!$scope.enviosCount || isNaN($scope.enviosCount) || $scope.enviosCount < MIN_ENVIOS){
+                return oldGetEnvios;
+            }
+            var a = [],len =parseInt($scope.enviosCount);
+            for(var i =0;i<len;i++){
+                a.push(i);
+            }
+            oldGetEnvios = a;
+            return a;
         };
         $scope.selectEnvio = function(num) {
             $scope.currentEnvio = num;

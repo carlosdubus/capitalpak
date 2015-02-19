@@ -238,12 +238,12 @@
                                         <div class="borde">
                                             <div style="background-color: #00b0f0!important; width:39%; float: left;height: 27px;padding-top: 1px;text-align: center;"><img class="" src="img/dropbox.png"/></div>
                                             <div style="width:29%; float: left;">
-                                                <input style="width:100%" type="text" readonly="readonly" name="quantity" min="1" max="15" placeholder="#" ng-model="enviosCount">
+                                                <input style="width:100%" type="text" name="quantity" min="1" max="15" placeholder="#" ng-model="enviosCount">
                                                 
                                             </div>
                                             <div style="float:left;margin-left:10px;line-height:10px">
-                                                <div><a href="#" style="color:#00b0f0!important;"><i class="fa fa-plus-square" ng-click="incEnvios($event)"></i></a></div>
-                                                <div><a href="#" style="color:#00b0f0!important;"><i class="fa fa-minus-square" ng-click="decEnvios($event)"></i></a></div>
+                                                <div><a href="#" style="color:#00b0f0!important;" ng-click="incEnvios($event)"><i class="fa fa-plus-square" ></i></a></div>
+                                                <div><a href="#" style="color:#00b0f0!important;" ng-click="decEnvios($event)"><i class="fa fa-minus-square" ></i></a></div>
                                             </div>
                                         </div>
                                     </div>
